@@ -7,15 +7,35 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
-?
+
+var isTruthy = function (a) {
+  return a ? true: false;
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-?
+
+isTruth(false);
+isTruth(null);
+isTruth(undefined);
+isTruth('');
+isTruth(0);
+isTruth(NaN);
+isTruth(-0);
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-?
+
+isTruth(1);
+isTruth('Rony');
+isTruth([]);
+isTruth({});
+isTruth(function () {});
+isTruth(1 + 1);
+isTruth(10*10);
+isTruth('chato demais isso aqui');
+isTruth('bla bla bla');
+isTruth(5+5);
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -29,35 +49,51 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+
+var carro = { marca: 'Honda', modelo: ' zxw ' , placa: ' klb666', ano: 2020, quantasPortas: 4, assentos: 5, quantidadePessoas: 0 };
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+
+carro.mudarCor = function ( cor ) {
+    carro.cor = cor ;
+};
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-?
+
+carro.obterCor = function () {
+    return carro.cor
+}; 
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+
+carro.obterModelo = function () {
+    carro.modelo
+};
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-?
+
+carro.obterMarca = function (){
+    return carro.marca
+};
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-?
+
+carro.oberMarcaModelo = function (){
+    return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo ();
+};
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -75,7 +111,8 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+
+
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -85,7 +122,8 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+
+
 
 // Mude a cor do carro para vermelho.
 ?
